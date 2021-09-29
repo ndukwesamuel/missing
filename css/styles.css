@@ -1,0 +1,486 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* Major Colors: */
+  --main-primary-color-1: #4a4a4a;
+  --main-primary-color-2: #6c63ff;
+  --main-primary-color-3: #1d293f;
+  --main-primary-color-4: #000000;
+  --main-primary-color-5: #707070;
+  --main-primary-color-6: #ffffff;
+  --main-primary-color-7: #f2545b;
+  --main-primary-color-8: #8c5e58;
+  --main-primary-color-9: #2e5bff;
+  --main-primary-color-10: #a93f55;
+  --main-primary-color-11: #e7eaed;
+  --main-primary-color-12: #313131;
+  --main-primary-color-13: #131523;
+  --main-primary-color-14: #183b56;
+  --main-primary-color-15: #5a7184;
+  --main-primary-color-16: #7c8087;
+  --main-primary-color-17: #5691ef;
+  --main-primary-color-18: #242582;
+  --main-primary-color-19: #323643;
+
+  /* secondary/clear color */
+  --clr-secondary-5: hsl(205, 78%, 60%);
+  /* lighter shades of secondary clear color */
+  --clr-secondary-6: hsl(205, 89%, 70%);
+  --clr-secondary-7: hsl(205, 90%, 76%);
+  --clr-secondary-8: hsl(205, 86%, 81%);
+  --clr-secondary-9: hsl(205, 90%, 88%);
+  --clr-secondary-10: hsl(205, 100%, 96%);
+
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  /* Regular */
+  --ff-primary: 'Poppins', sans-serif;
+  --ff-secondary: 'Open Sans', sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: var(--ff-secondary);
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 2.4rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  transition: var(--transition);
+  color: var(--main-primary-color-15);
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 1.2rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 4.8rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.4rem;
+}
+p {
+  margin-bottom: 2rem;
+  color: var(--clr-grey-5);
+}
+
+/* 
+==========
+  NAVBAR
+==========
+*/
+
+.nav-center {
+  padding: 1rem;
+  background: var(--main-primary-color-7);
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-header .logo {
+  box-shadow: 5px 0px 5px var(--main-primary-color-16);
+}
+
+/* nav toggle */
+.nav-toggle {
+  background: var(--main-primary-color-11);
+  border-radius: var(--radius);
+  padding: 1rem;
+  font-size: 3rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.nav-toggle:hover {
+  color: var(--main-primary-color-10);
+}
+
+a:hover {
+  color: var(--main-primary-color-4);
+}
+
+/* links */
+.links-wrapper {
+  height: 0px;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+/* for active link */
+.active {
+  background: var(--main-primary-color-6);
+  padding: 0.5rem;
+  color: var(--main-primary-color-10);
+}
+
+/* 
+==========
+ FORM
+==========
+*/
+
+/* account wrapper */
+#account-wrapper {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background: var(--main-primary-color-6);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  height: 80%;
+  box-shadow: var(--light-shadow);
+}
+
+.account-title {
+  text-align: center;
+}
+
+.alert {
+  color: var(--clr-red-dark);
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  text-align: center;
+}
+
+/* the form */
+
+.form {
+  width: 70vw;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.input {
+  display: block;
+  width: 100%;
+  margin: 1rem;
+  padding: 0.5rem;
+  border: none;
+  box-shadow: 0px 0px 4px 3px var(--main-primary-color-1);
+  font-size: 3rem;
+}
+
+.input::placeholder {
+  font-size: 2rem;
+}
+
+.form-btn {
+  width: 100%;
+  margin: 1rem;
+  background: var(--main-primary-color-7);
+  text-transform: capitalize;
+  color: var(--main-primary-color-11);
+  border-radius: var(--radius);
+  padding: 1rem;
+  font-size: 3rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.form-btn:hover {
+  background: #a93f54c2;
+  color: var(--clr-black);
+}
+
+/* existing account */
+
+.existing-acctount {
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+#sign-in {
+  color: var(--clr-red-dark);
+}
+
+/* modal */
+.success {
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  color: var(--main-primary-color-11);
+  font-size: 3rem;
+  background: var(--clr-green-dark);
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.modal-items {
+  text-align: center;
+}
+
+/* login button */
+.login-btn {
+  width: 100%;
+  background: var(--main-primary-color-6);
+  text-transform: capitalize;
+  color: var(--clr-red-dark);
+  border-radius: var(--radius);
+  padding: 1rem;
+  font-size: 3rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.login-btn a {
+  color: var(--clr-red-dark);
+}
+
+.login-btn:hover a {
+  color: var(--main-primary-color-6);
+}
+
+.login-btn:hover {
+  background: var(--clr-red-dark);
+}
+
+.close-modal {
+  text-align: end;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 7.4rem;
+  }
+  h2 {
+    font-size: 5rem;
+  }
+  h3 {
+    font-size: 3.8rem;
+  }
+  h4 {
+    font-size: 2.6rem;
+  }
+  body {
+    font-size: 2.5rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1.5;
+  }
+
+  .nav-toggle {
+    font-size: 4rem;
+    padding: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 6.4rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2.8rem;
+  }
+  h4 {
+    font-size: 1.6rem;
+  }
+  body {
+    font-size: 1.6rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+
+  .nav-center {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: var(--dark-shadow);
+  }
+
+  /* nav header */
+  .nav-header .logo {
+    box-shadow: none;
+  }
+  .nav-header {
+    width: fit-content;
+    box-shadow: 5px 0px 5px var(--main-primary-color-16);
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  /* Links */
+  .links {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .links-wrapper {
+    width: 100%;
+    height: auto !important;
+  }
+
+  .links li {
+    display: inline;
+    margin-left: 1rem;
+  }
+
+  /* 
+==========
+ FORM
+==========
+*/
+
+  #account-wrapper {
+    width: 60vw;
+  }
+  .form {
+    width: 50vw;
+  }
+
+  .input {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 7.4rem;
+  }
+  h2 {
+    font-size: 5rem;
+  }
+  h3 {
+    font-size: 3.8rem;
+  }
+  h4 {
+    font-size: 3.6rem;
+  }
+  body {
+    font-size: 2.2rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 2;
+  }
+
+  .login-btn {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 8.4rem;
+  }
+  h2 {
+    font-size: 6rem;
+  }
+  h3 {
+    font-size: 4.8rem;
+  }
+  h4 {
+    font-size: 3.6rem;
+  }
+  body {
+    font-size: 2.5rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 2;
+  }
+  .login-btn {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  h1 {
+    font-size: 9.4rem;
+  }
+  h2 {
+    font-size: 7rem;
+  }
+  h3 {
+    font-size: 5.8rem;
+  }
+  h4 {
+    font-size: 4.6rem;
+  }
+  body {
+    font-size: 3rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 2.8;
+  }
+}
